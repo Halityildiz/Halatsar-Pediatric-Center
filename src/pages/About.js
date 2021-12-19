@@ -5,7 +5,15 @@ const About = () => {
     <Container className="text-center mt-4">
       <Row>
         <Col className="d-flex align-item-center justify-content-center">
-          <img style={{ width: "500px" }} src={asset3} alt="" />
+          <img
+            style={{
+              width: "500px",
+              borderRadius: "30px",
+              border: "5px solid #a2c6fd",
+            }}
+            src={asset3}
+            alt=""
+          />
         </Col>
         <Col>
           <h1>Who We are?</h1>

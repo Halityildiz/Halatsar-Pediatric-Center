@@ -5,7 +5,15 @@ const Education = () => {
     <Container className="text-center mt-4">
       <Row>
         <Col className="d-flex align-item-center justify-content-center">
-          <img style={{ width: "400px" }} src={edu} alt="" />
+          <img
+            style={{
+              width: "500px",
+              borderRadius: "30px",
+              border: "5px solid #a2c6fd",
+            }}
+            src={edu}
+            alt=""
+          />
         </Col>
         <Col>
           <h1>Academic Excellence</h1>
