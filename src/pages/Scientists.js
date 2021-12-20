@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../src/index.css";
 
 const Scientists = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const url = "https://api.github.com/users";
 
@@ -21,15 +21,18 @@ const Scientists = () => {
       </h1>
       <div className="cont">
         {users.map((user) => {
-          const { id, login, avatar_url, html_url, repos_url } = user;
+          const { id, login, avatar_url, repos_url } = user;
           return (
             <div className="card" key={id}>
               <img src={avatar_url} alt={login} />
               <h3>{login}</h3>
               <h4>{repos_url}</h4>
-              <a href={html_url} className="btn">
+              <button
+                className="btn"
+                onClick={() => navigate(`/scientists/${user.login}`)}
+              >
                 view profile
-              </a>
+              </button>
             </div>
           );
         })}

@@ -10,6 +10,7 @@ import Ortopedi from "./pages/Ortopedi";
 import Psikoloji from "./pages/Psikoloji";
 import Scientists from "./pages/Scientists";
 import Education from "./pages/Education";
+import InstructorDetail from "./pages/InstructorDetail";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/psikoloji" element={<Psikoloji />} />
         <Route path="/cerrahi" element={<Cerrahi />} />
         <Route path="/scientists" element={<Scientists />} />
+        <Route path="/scientists/:login" element={<InstructorDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
