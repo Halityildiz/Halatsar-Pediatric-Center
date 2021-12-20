@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
+import "../../src/index.css";
 
 const InstructorDetail = () => {
   const navigate = useNavigate();
@@ -18,12 +19,22 @@ const InstructorDetail = () => {
 
   return (
     <Container className="text-center mt-4">
-      <h1>NAME:{login}</h1>
-      <img src={avatar_url} alt="" />
+      <h1>
+        Name :<span style={{ color: "red" }}> {login}</span>
+      </h1>
+      <img style={{ borderRadius: "40%" }} src={avatar_url} alt={login} />
       <h3>{html_url}</h3>
-      <h4>{company}</h4>
-      <h4>{location}</h4>
-      <button className="btn-warning" onClick={() => navigate(-1)}>
+      <h4>
+        Company :<span style={{ color: "red" }}> {company}</span>
+      </h4>
+      <h4>
+        Location :<span style={{ color: "red" }}>{location}</span>
+      </h4>
+      <button
+        style={{ padding: "5px 20px", borderRadius: "15px" }}
+        className="btn-primary"
+        onClick={() => navigate(-1)}
+      >
         Go Back
       </button>
     </Container>
