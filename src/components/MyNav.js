@@ -13,6 +13,7 @@ const MyNav = () => {
         expand="lg"
         style={{
           background: "#a1c4fd",
+          color: "white",
         }}
         onSelect={(eventKey) =>
           eventKey === "home" ? navigate("/") : navigate(`/${eventKey}`)
@@ -22,7 +23,10 @@ const MyNav = () => {
           <Navbar.Brand>
             <Nav.Link eventKey="home">
               <img
-                style={{ width: "300px", borderRadius: "30px" }}
+                style={{
+                  width: "300px",
+                  borderRadius: "30px",
+                }}
                 src={logo}
                 alt=""
               />
@@ -36,7 +40,8 @@ const MyNav = () => {
                   style={{
                     backgroundImage:
                       "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
-                    margin: "0 0px 10px",
+                    margin: "0 0px 1px",
+                    borderRadius: "30px",
                   }}
                   eventKey="hastalik"
                 >
@@ -46,7 +51,8 @@ const MyNav = () => {
                   style={{
                     backgroundImage:
                       "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
-                    margin: " 10px 0",
+                    margin: " 2px 0",
+                    borderRadius: "30px",
                   }}
                   eventKey="ortopedi"
                 >
@@ -56,7 +62,8 @@ const MyNav = () => {
                   style={{
                     backgroundImage:
                       "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
-                    margin: " 10px 0",
+                    margin: " 2px 0",
+                    borderRadius: "30px",
                   }}
                   eventKey="cerrahi"
                 >
@@ -66,14 +73,15 @@ const MyNav = () => {
                   style={{
                     backgroundImage:
                       "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
-                    margin: " 10px 0 0",
+                    margin: " 2px 0 0",
+                    borderRadius: "30px",
                   }}
                   eventKey="psikoloji"
                 >
                   Çocuk Psikolojisi ve Psikolojik Danışmanlık
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link eventKey="about">AboutUs</Nav.Link>
+              <Nav.Link eventKey="about">About</Nav.Link>
               <Nav.Link eventKey="Scientists">Scientists</Nav.Link>
               <Nav.Link eventKey="education">Education</Nav.Link>
               <Nav.Link eventKey="contact">Contact</Nav.Link>
